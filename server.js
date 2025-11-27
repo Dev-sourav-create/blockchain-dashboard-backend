@@ -4,12 +4,12 @@ const cors = require("cors");
 const express = require("express");
 const mongoose = require("mongoose");
 
-const authRoutes = require("../back-end/src/routes/auth.routes");
-const userRoutes = require("../back-end/src/routes/user.routes.js");
-const taskRoutes = require("../back-end/src/routes/task.routes.js");
-const blockRoutes = require("../back-end/src/routes/block.routes.js");
-const priceRoutes = require("../back-end/src/routes/price.route.js");
-const statsRoutes = require("../back-end/src/routes/stat.route.js");
+const authRoutes = require("./src/routes/auth.routes");
+const userRoutes = require("./src/routes/user.routes");
+const taskRoutes = require("./src/routes/task.routes");
+const blockRoutes = require("./src/routes/block.routes");
+const priceRoutes = require("./src/routes/price.route");
+const statsRoutes = require("./src/routes/stat.route");
 const employeeRoutes = require("./src/routes/employee.routes");
 
 const app = express();
