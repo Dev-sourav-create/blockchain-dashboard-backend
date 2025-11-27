@@ -1,14 +1,16 @@
 const express = require("express");
-const Employee = require("../modals/employee");
+const {
+  getAllEmployees,
+  createEmployee,
+  updateEmployee,
+  deleteEmployee,
+} = require("../controller/employee.controller");
+
 const router = express.Router();
 
-router.get("/", async (req, res) => {
-  try {
-    const all = await Employee.find();
-    res.json(all);
-  } catch (e) {
-    res.status(500).json({ msg: "Server Error", e });
-  }
-});
+router.get("/", getAllEmployees);
+router.post("/", createEmployee);
+router.put("/:id", updateEmployee);
+router.delete("/:id", deleteEmployee);
 
 module.exports = router;
